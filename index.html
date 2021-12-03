@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+    <title>Beyond40 Part1</title>
+    <link rel="icon" href="img/favicon.png" sizes="any" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,900;1,300&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header" id="header">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <section class="section-flex-wrap">
+            <h3 class="font-montserrat text-center">Reviews</h3>
+
+            <div class="div-flex">
+                <div class="div-rating div-flex">
+                    <div>
+                        <div class="div-score font-montserrat">
+                            <span>4.9</span>
+                            
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        
+                        <div class="font-lato">Based on 3,216 Reviews</div>
+                    </div>
+
+                    <ul class="div-stars font-opensans">
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+
+                            <div class="rating-bar">
+                                <div class="rating-bar-content" style="width:90%;"></div>
+                            </div>
+
+                            <span>(2925)</span>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+
+                            <div class="rating-bar">
+                                <div class="rating-bar-content" style="width:7%;"></div>
+                            </div>
+
+                            <span>(229)</span>
+                        </li>
+                        
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+
+                            <div class="rating-bar">
+                                <div class="rating-bar-content" style="width:2%;"></div>
+                            </div>
+                            
+                            <span>(50)</span>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+
+                            <div class="rating-bar"></div>
+
+                            <span>(5)</span>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+
+                            <div class="rating-bar"></div>
+
+                            <span>(7)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="div-buttons">
+                    <button class="font-lato"><i class="fa fa-comments-o"></i> Ask a Question</button>
+                    <button class="font-lato"><i class="fa fa-edit"></i> Write a Review</button>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span class="copyright">Thank you for taking time to review my test result Angela Stec.</span>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</body>
+
+<script>
+    window.onscroll = function() {stickyFunction()};
+
+    // Get the header
+    var header = document.getElementById("header");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    $(document).ready(function () {
+        $(".div-stars li").on({
+            mouseenter: function () {
+                $(".div-stars li").css("opacity", '0.5');
+                $(this).css("opacity", '1');
+            },
+            mouseleave: function () {
+                $(".div-stars li").css("opacity", '1');
+            }
+        });
+    
+    });
+</script>
+
+</html>

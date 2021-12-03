@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    align-items: center;
+}
+
+.font-lato {
+    font-family: 'Lato',sans-serif;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow:  0 10px 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(33,39,33,var(--tw-text-opacity));
+}
+
+.text-center {
+    text-align: center;
+}
+
+p {
+    font-size: 19px;
+    line-height: 27px;
+    color: #717171;
+}
+
+button {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    padding: 3px 20px;
+    line-height: 30px;
+    border: 1px solid #ccd6e0;
+    border-radius: 3px;
+    border-color: #212721;
+    border-width: 2px;
+    box-shadow: 2px 3px 5px 0 #8888886b;
+    margin-right: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    z-index: 200;
+}
+
+.header .logo {
+    flex: 1;
+}
+
+.header .logo img {
+    max-width: 390px;
+}
+
+/* Content */
+.content {
+    overflow: hidden;
+}
+
+.section-flex-wrap {
+    padding: 200px;
+}
+
+.div-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-score {
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.div-score span {
+    font-size: 37px;
+    line-height: 30px;
+    margin-right: 12px;
+}
+
+.div-score .fa-star {
+    font-size: 22px;
+    color: #0092d6;
+    margin-right: 8px;
+}
+
+.div-rating {
+    display: flex;
+    margin: 0 auto;
+}
+
+ul.div-stars {
+    color: #777;
+    margin: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+ul.div-stars .fa {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+ul.div-stars li {
+    display: flex;
+    padding-bottom: 7px;
+}
+
+ul.div-stars li:hover {
+    cursor: pointer;
+}
+
+.rating-bar {
+    background: #f0f0f0;
+    width: 130px;
+    height: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.rating-bar-content {
+    height: 15px;
+    background-color: #0092d6;
+}
+
+.div-placeholder {
+    min-height: 100px;
+    background: #CACACA;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.footer .copyright {
+    font-family: Arial;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header .logo img {
+        width: 100%;
+    }
+
+    .section-flex-wrap {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .div-flex {
+        flex-direction: column;
+    }
+
+    .div-paragraph {
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .sticky {
+        width: auto;
+    }
+}
